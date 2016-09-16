@@ -8,11 +8,24 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    //create a public variable for the total text view
+    TextView totalTextView;
+
+    //crete public variable for the two editable text fields
+    EditText percentageTxt;
+    EditText numberTxt;
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    //Part of the activity and will be called automatically when its time to create the view
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -26,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+
+        //create the instance of the button, and cast the view that we will find
+        //R.id.calcButton, creates a reference for the button in the code
+        Button calcButton = (Button) findViewById(R.id.calcButton);
+
+        //set a click listener for the button, pretty much an ibAction
+
     }
 
     @Override
